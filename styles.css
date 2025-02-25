@@ -1,0 +1,85 @@
+/* press-start-2p-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Press Start 2P";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/press-start-2p-v15-latin-regular.woff2") format("woff2");
+}
+
+/* CSS RESET — Josh Comeau */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* VARIABLES */
+:root {
+  /* colors */
+  --clr-primary: #005f73;
+  --clr-secondary: #94d2bd;
+  --clr-accent: #e63946;
+  --clr-background: #f1faee;
+  --clr-text: #1d3557;
+
+  /* font family */
+  --ff-headings: "Space Grotesk", sans-serif;
+  --ff-body: "Space Grotesk", sans-serif;
+
+  /* font weights */
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+/* REUSABLE STYLES */
+
+/* containers */
+.container {
+  --max-width: 69.375rem;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* PAGE STYLES */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
