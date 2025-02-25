@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <button type="button" class="btn btn--again" aria-label="Re-start game">
+          Again
+        </button>
+        <p>(between 1 and 20)</p>
+      </header>
+      <!-- hidden number -->
+      <section class="hidden-number-wrapper">
+        <h1>Guess My Number</h1>
+        <div class="guess-icon-wrapper">
+          <p class="hidden-number">?</p>
+        </div>
+      </section>
+      <!-- guess section -->
+      <div class="grid-2cols">
+        <section class="game-input">
+          <h2>Your Guess</h2>
+          <form class="input-wrapper">
+            <label for="user-guess">Input your guess</label>
+            <input id="user-guess" type="number" min="1" max="20" />
+            <button
+              type="button"
+              class="btn btn--check"
+              aria-label="Check your guess"
+            >
+              Check!
+            </button>
+          </form>
+        </section>
+        <section class="instructions-wrapper">
+          <h2>Game Information</h2>
+          <p class="message">Start guessing</p>
+          <p>💯 Score: <span class="score">20</span></p>
+          <p>🥇 Highscore: <span class="high-score">0</span></p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
