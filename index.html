@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-      <header>
+      <header class="header container d-flex">
         <button type="button" class="btn btn--again" aria-label="Re-start game">
           Again
         </button>
@@ -19,14 +19,17 @@
         <h1>Guess My Number</h1>
         <div class="guess-icon-wrapper">
           <p class="hidden-number">?</p>
+          <div class="divider"></div>
         </div>
       </section>
       <!-- guess section -->
-      <div class="grid-2cols">
+      <div class="guess-section container grid-2cols">
         <section class="game-input">
-          <h2>Your Guess</h2>
-          <form class="input-wrapper">
-            <label for="user-guess">Input your guess</label>
+          <h2 class="visually-hidden">Your Guess</h2>
+          <form class="input-wrapper d-flex--column">
+            <label for="user-guess" class="visually-hidden"
+              >Input your guess</label
+            >
             <input id="user-guess" type="number" min="1" max="20" />
             <button
               type="button"
