@@ -56,6 +56,7 @@ h6 {
   --clr-red: hsl(148, 54%, 58%);
   --clr-green: hsl(0, 66%, 55%);
   --clr-white: hsl(0, 0%, 93%);
+  --clr-lighter-white: hsl(0, 0%, 80%);
 }
 
 /* REUSABLE STYLES */
@@ -73,6 +74,10 @@ h6 {
   border: none;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: var(--clr-lighter-white);
 }
 
 .grid-2cols {
@@ -118,7 +123,6 @@ body {
 }
 
 .hidden-number-wrapper h1 {
-  text-align: center;
   font-size: 1.5rem;
   font-size: clamp(
     1.5rem,
@@ -126,6 +130,7 @@ body {
     2.5rem
   );
   color: var(--clr-white);
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -140,6 +145,7 @@ body {
   padding: 0.3em 1em;
   margin-inline: auto;
   max-width: fit-content;
+  display: block;
 }
 .divider {
   height: 0.5rem;
@@ -154,10 +160,28 @@ body {
 
 /* guess section */
 .guess-section {
-  margin-top: 2rem;
+  justify-items: center;
+  margin-top: 4rem;
 }
 
-.input-wrapper {
+.form {
   align-items: center;
   gap: 1rem;
+}
+
+#user-guess {
+  font-size: 2.5rem;
+  color: inherit;
+  text-align: center;
+  background: none;
+  border: 0.2rem solid var(--clr-white);
+  padding: 1rem;
+  width: 12rem;
+}
+
+.instructions {
+  gap: 1rem;
+}
+.message {
+  margin-bottom: 2rem;
 }

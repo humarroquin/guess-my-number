@@ -12,13 +12,13 @@
         <button type="button" class="btn btn--again" aria-label="Re-start game">
           Again
         </button>
-        <p>(between 1 and 20)</p>
+        <small>(between 1 and 20)</small>
       </header>
       <!-- hidden number -->
       <section class="hidden-number-wrapper">
         <h1>Guess My Number</h1>
         <div class="guess-icon-wrapper">
-          <p class="hidden-number">?</p>
+          <span class="hidden-number">?</span>
           <div class="divider"></div>
         </div>
       </section>
@@ -26,7 +26,7 @@
       <div class="guess-section container grid-2cols">
         <section class="game-input">
           <h2 class="visually-hidden">Your Guess</h2>
-          <form class="input-wrapper d-flex--column">
+          <form class="form d-flex--column">
             <label for="user-guess" class="visually-hidden"
               >Input your guess</label
             >
@@ -40,9 +40,9 @@
             </button>
           </form>
         </section>
-        <section class="instructions-wrapper">
-          <h2>Game Information</h2>
-          <p class="message">Start guessing</p>
+        <section class="instructions d-flex--column">
+          <h2 class="visually-hidden">Game Information</h2>
+          <p class="message">Start guessing...</p>
           <p>💯 Score: <span class="score">20</span></p>
           <p>🥇 Highscore: <span class="high-score">0</span></p>
         </section>
