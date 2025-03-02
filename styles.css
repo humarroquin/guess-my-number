@@ -181,7 +181,9 @@ body {
 
 .instructions {
   gap: 1rem;
+  width: min(25rem, 100%);
 }
 .message {
   margin-bottom: 2rem;
+  height: 1.5rem;
 }
