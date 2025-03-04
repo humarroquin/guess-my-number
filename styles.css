@@ -53,8 +53,8 @@ h6 {
 :root {
   /* colors */
   --clr-black: hsl(204, 29%, 20%);
-  --clr-red: hsl(148, 54%, 58%);
-  --clr-green: hsl(0, 66%, 55%);
+  --clr-green: hsl(160, 47%, 40%);
+  --clr-red: hsl(0, 66%, 55%);
   --clr-white: hsl(0, 0%, 93%);
   --clr-lighter-white: hsl(0, 0%, 80%);
 }
