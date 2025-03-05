@@ -10,21 +10,19 @@ const body = document.querySelector("body");
 let score = 20;
 let highScore = 0;
 
-// create a random number
+// generate a random number
 let randomNumber = function () {
   return Math.floor(Math.random() * 20) + 1;
 };
 
-// see hidden number for dev purposes
 let secretNumber = randomNumber();
-hiddenNumber.textContent = secretNumber;
 
 // display message
 const message = function (message) {
   displayMessage.textContent = message;
 };
 
-// game logic function
+// check guess
 const checkGuess = function (e) {
   e.preventDefault();
   const userGuess = Number(userInput.value);
@@ -36,6 +34,7 @@ const checkGuess = function (e) {
     body.style.backgroundColor = "var(--clr-green)";
     checkBtn.disabled = true;
     checkBtn.style.cursor = "not-allowed";
+    userInput.disabled = true;
     if (score > highScore) {
       highScore = score;
       displayHighScore.textContent = highScore;
@@ -60,10 +59,25 @@ const checkGuess = function (e) {
   }
 };
 
-// player can check their guesses by clicking on the check button or by pressing the enter button
+// reset game
+const resetGame = function () {
+  secretNumber = randomNumber();
+  hiddenNumber.textContent = secretNumber; // dev
+  score = 20;
+  displayScore.textContent = score;
+  checkBtn.disabled = false;
+  checkBtn.style.cursor = "pointer";
+  body.style.backgroundColor = "var(--clr-black)";
+  message("Start guessing...");
+  userInput.value = "";
+  userInput.disabled = false;
+};
+
+// event listeners
 checkBtn.addEventListener("click", checkGuess);
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     checkGuess(e);
   }
 });
+againBtn.addEventListener("click", resetGame);
