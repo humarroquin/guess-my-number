@@ -137,7 +137,6 @@ body {
 /* hidden number */
 .guess-icon-wrapper {
   position: relative;
-  outline: lime 2px solid;
 }
 .hidden-number {
   font-size: 3rem;
