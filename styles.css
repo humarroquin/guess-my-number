@@ -85,6 +85,12 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
 }
 
+@media screen and (max-width: 36rem) {
+  .grid-2cols {
+    grid-template-columns: 1fr;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -119,6 +125,7 @@ body {
 /* header */
 .header {
   justify-content: space-between;
+  gap: 1rem;
   padding-block: 1rem;
 }
 
@@ -189,4 +196,9 @@ body {
 .message {
   margin-bottom: 2rem;
   height: 1.5rem;
+}
+@media screen and (max-width: 36rem) {
+  .instructions {
+    margin-block: 2rem;
+  }
 }
